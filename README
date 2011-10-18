@@ -1,0 +1,39 @@
+using System;
+using System.Threading;
+
+class Program
+{
+    static void Main()
+    {
+        // Loop from 1 to 100.
+        for (int i = 1; i <= 100; i++) 
+        {
+            // Identify whole number when dividing by 3 and 5.
+            if (((i % 3) == 0) & ((i % 5) == 0))
+            {
+                Console.WriteLine("ModernMedical");
+                continue;
+            }
+
+            // Identify whole number when dividing by 3.
+            if ((i % 3) == 0)
+            {
+                Console.WriteLine("Modern");
+                continue;
+            }
+
+            // Identify whole number when dividing by 5.
+            if ((i % 5) == 0)
+            {
+                Console.WriteLine("Medical");
+                continue;
+            }
+
+            // Otherwise just display the current number.
+            Console.WriteLine("{0}", i);
+
+            // Pause for debugging.
+            Thread.Sleep(1000);
+        }
+    }
+}
